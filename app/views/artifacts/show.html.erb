@@ -1,17 +1,15 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @artifact %>
+<div class="container">
+  <h1 class="text-center my-3 text-white">Artifact [<%= @artifact.name %>]</h2>
 
-<div>
-<<<<<<< HEAD
-  <%= link_to "Edit this artifact", edit_artifact_path(@artifact), class: "btn btn-warning" %>
-  <%= link_to "Back to artifacts", artifacts_path, class: "btn btn-success mx-5" %>
+  <div class="row row-cols-4 justify-content-center">
+      <%= render @artifact %>
+  </div>
 
-  <%= button_to "Destroy this artifact", @artifact, method: :delete, class: "btn btn-danger mt-2" %>
-=======
-  <%= link_to "Edit this artifact", edit_artifact_path(@artifact) %> |
-  <%= link_to "Back to artifacts", artifacts_path %>
+  <div class="d-flex flex-row justify-content-center mt-3">
+    <%= link_to "Edit", edit_artifact_path(@artifact), width: 20, class: "btn btn-warning" %>
+    <%= link_to "Artifacts", artifacts_path, class: "btn btn-success ms-2" %>
+    <%= link_to "Destroy", @artifact, data: { turbo_method: :delete }, class: "btn btn-danger ms-2" %>
+  </div>
 
-  <%= button_to "Destroy this artifact", @artifact, method: :delete %>
->>>>>>> 5739d4c07d02e1daa9ce43715c24f5316ff476f4
 </div>

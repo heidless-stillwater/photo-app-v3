@@ -21,15 +21,9 @@ class ArtifactsController < ApplicationController
 
   # POST /artifacts or /artifacts.json
   def create
-<<<<<<< HEAD
     @artifact = Artifact.new(artifact_params)
     @artifact.user_id = current_user.id
-=======
-
-    @artifact = Artifact.new(artifact_params)
-    @artifact.user = current_user
->>>>>>> 5739d4c07d02e1daa9ce43715c24f5316ff476f4
-
+    
     respond_to do |format|
       if @artifact.save
         format.html { redirect_to @artifact, notice: "Artifact was successfully created." }

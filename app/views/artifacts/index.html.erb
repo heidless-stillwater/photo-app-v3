@@ -1,43 +1,28 @@
-<p style="color: green"><%= notice %></p>
-
-<<<<<<< HEAD
-<% content_for :title, "Artifacts" %>
-
-<h1 class="text-white mb-3 text-center">Artifacts</h1>
-
-
-<div id="artifacts">
-  <% @artifacts.each do |artifact| %>
-    <%= render artifact %>
-    <p>
-      <%= link_to "Show this artifact", artifact, class: "btn btn-primary" %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New artifact", new_artifact_path, class: "btn btn-primary" %>
-=======
 <div class="container">
 
   <% content_for :title, "Artifacts" %>
 
-  <h1 class="text-center mt-8 mb-4 text-white">Artifacts</h2>
-
+  <div class="mb-5">
+    <h1 class="text-center mt-0 mb-0 text-white">Artifacts</h2>
+    <div class="text-center">
+      <%= link_to "New Artifact", new_artifact_path, class: "btn btn-success mt-2" %>
+    </div>
+  </div>
 
   <div id="artifacts">
-    <% @artifacts.each do |artifact| %>
-      <%= render artifact %>
-      <p>
-        <%= link_to "Show this artifact", artifact, class: "btn btn-warning mt-1" %>
-      </p>
-    <% end %>
-    <div class="center">
-      <%= link_to "New Artifact", new_artifact_path, class: "btn btn-success mt-5" %>
+    <div class="row row-cols-4 justify-content-center">
+      <% @artifacts.each do |artifact| %>
+      
+        <div class="center me-3 mb-5">
+          <%= render artifact %>
+          
+          <div class="d-flex flex-row">
+            <%= link_to "Show", artifact, class: "btn btn-warning mt-1 ms-1" %>
+            <%= link_to "Destroy", artifact, data: { turbo_method: :delete }, class: "btn btn-danger mt-1 ms-2" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-
   </div>
 </div>
 
-
-
->>>>>>> 5739d4c07d02e1daa9ce43715c24f5316ff476f4
