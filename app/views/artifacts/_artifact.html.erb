@@ -1,0 +1,32 @@
+<div id="<%= dom_id artifact %>">
+<<<<<<< HEAD
+  <div class="card card-header results-block mx-1 my-1" style="width: 20rem;">
+    <div class="card-body">
+      <%= image_tag(artifact, width: 250, class: "mcard-img-top x-auto d-block", alt:"Card image cap") %>
+      <h5 class="card-title mt-2"><%= artifact.name %></h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <%= link_to "Remove", remove_image_artifact_path(artifact), data: { turbo_method: :delete }, width: 1, class: "btn btn-danger" %>
+    <br />
+  </div>
+</div>
+
+=======
+  <p>
+    <strong>Name:</strong>
+    <%= artifact.name %>
+  </p>
+
+  <p>
+    <strong>Picture:</strong>
+    <%= artifact.picture %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= artifact.user_id %>
+  </p>
+
+</div>
+>>>>>>> 5739d4c07d02e1daa9ce43715c24f5316ff476f4

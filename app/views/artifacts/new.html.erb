@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+<% content_for :title, "New image" %>
+
+<div class="container"> 
+  <h1 class="text-white mb-3 text-center">New Artifact</h1>
+
+  <%= render "form", artifact: @artifact %>
+
+  <div class="mt-5">
+    <%= link_to "Back to artifacts", artifacts_path , class: "btn btn-primary" %>
+  </div>
+=======
+<% content_for :title, "New artifact" %>
+
+<h1 class="text-center mt-8 mb-4 text-white">New Artifact</h1>
+
+<%= render "form", artifact: @artifact %>
+
+<br>
+
+<div>
+  <%= link_to "Back to Artifacts", artifacts_path, class: "btn btn-warning" %>
+>>>>>>> 5739d4c07d02e1daa9ce43715c24f5316ff476f4
+</div>
