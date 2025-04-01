@@ -28,7 +28,9 @@
             </a>
             <div class="dropdown-menu">
               <% if current_user %>
-                <%= link_to "New Artifact", new_artifact_path, class: "dropdown-item" %>
+                <%= link_to new_artifact_path, class: "dropdown-item" do %>
+                  <%= fa_icon 'edit'%> New Artifact
+                <% end %>
               <% end %>
               <%= link_to "View Artifacts", artifacts_path, class: "dropdown-item" %>
             </div>

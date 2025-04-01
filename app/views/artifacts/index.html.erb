@@ -17,8 +17,9 @@
           <%= render artifact %>
           
           <div class="d-flex flex-row">
-            <%= link_to "Show", artifact, class: "btn btn-warning mt-1 ms-1" %>
-            <%= link_to "Destroy", artifact, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger mt-1 ms-2" %>
+            <%= link_to "Show", artifact, class: "btn btn-warning mt-1" %>            
+            <%= link_to "Edit", edit_artifact_path(artifact), width: 20, class: "btn btn-primary mt-1 mx-2" %>
+            <%= link_to "Destroy", artifact, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger mt-1" %>
           </div>
         </div>
       <% end %>
