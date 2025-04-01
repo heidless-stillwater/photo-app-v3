@@ -2,7 +2,8 @@
   <div class="img-responsive center-block">
       
     
-    <%= image_tag current_user.avatar, width: "400", class: "mx-auto d-block" %>
+    <%= image_tag current_user.avatar, width: "200", class: "mx-auto d-block" %>
+
     <h3 class="text-center mt-2"><%= fa_icon 'user 1x' %> <%= current_user.email %></h3>
 
     <%= render 'shared/welcome_gallery' %>

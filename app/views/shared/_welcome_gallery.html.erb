@@ -12,7 +12,7 @@
                   <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
 
-                <%= link_to "Remove", remove_image_user_path(image), data: { turbo_method: :delete }, width: 1, class: "btn btn-danger" %>
+                <%= link_to "Remove", remove_image_user_path(image), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, width: 1, class: "btn btn-danger" %>
                 <br />
               </div>
             <% end %>
