@@ -13,13 +13,23 @@
     <div class="row row-cols-4 justify-content-center">
       <% @artifacts.each do |artifact| %>
       
-        <div class="center me-3 mb-5">
+        <div class="center me-0 mb-5">
           <%= render artifact %>
           
           <div class="d-flex flex-row">
-            <%= link_to "Show", artifact, class: "btn btn-warning mt-1" %>            
-            <%= link_to "Edit", edit_artifact_path(artifact), width: 20, class: "btn btn-primary mt-1 mx-2" %>
-            <%= link_to "Destroy", artifact, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger mt-1" %>
+
+            <%= link_to artifact do %>
+              <%= fa_icon "eye", class: "mt-1 mx-2" %>
+            <% end %>
+
+            <%= link_to edit_artifact_path(artifact) do %>
+              <%= fa_icon "edit", class: "mt-1 mx-2" %>
+            <% end %>
+
+            <%= link_to artifact, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+              <%= fa_icon "trash", class: "mt-1 mx-2" %>
+            <% end %>
+
           </div>
         </div>
       <% end %>

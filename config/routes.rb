@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-  resources :artifacts
   devise_for :users, :controllers => { :registrations => 'registrations' }
   root "welcome#index"
   
   resources :artifacts do 
     member do
-      # remove_image_artifact_path(image)
-      delete :remove_image
+      # remove_artimg_artifact_path(artimg)
+      delete :remove_artimg
     end
   end
 

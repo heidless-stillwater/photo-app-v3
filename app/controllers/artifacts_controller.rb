@@ -58,7 +58,14 @@ class ArtifactsController < ApplicationController
     end
   end
 
+  def remove_artimg
+    @artimg = ActiveStorage::Attachment.find(params[:id])
+    @artimg.purge_later
+    redirect_back(fallback_location: request.referer)
+  end
+
   private
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_artifact
       @artifact = Artifact.find(params[:id])
@@ -66,6 +73,6 @@ class ArtifactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def artifact_params
-      params.require(:artifact).permit(:name, :picture, :user_id)
+      params.require(:artifact).permit(:name, :picture, :user_id, :artimg)
     end
 end
